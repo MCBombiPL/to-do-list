@@ -58,7 +58,28 @@ html {
     border-bottom: 1px solid #e7e6e6;
 }
 
-.taskList__tasks {
+.newTasks {
     background-color: white;
     padding: 20px;
+}
+
+.newTasks__listItem {
+    list-style-type: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+}
+
+.newTasks__checkboxButton {
+    background-color: green;
+    flex-basis: 20px;
+}
+
+.newTasks__removingButton {
+    background-color: red;
+    flex-basis: 20px;
+}
+
+.newTasks__content {
+    flex-grow: 1
 }

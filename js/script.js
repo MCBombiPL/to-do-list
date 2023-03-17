@@ -5,8 +5,8 @@
         let htmlString = "";
 
         for (const task of tasks) {
-            htmlString += `<li>
-    ${task.content}
+            htmlString += `<li class="newTasks__listItem"><button class="newTasks__checkboxButton"></button>
+    <span class="newTasks__content">${task.content}</span><button class="newTasks__removingButton"></button>
     </li>`
         }
         document.querySelector(".js-newTasks").innerHTML = htmlString;
