@@ -1,6 +1,25 @@
 {
     const tasks = [];
 
+    const addNewTask = () => {
+        tasks.push({
+            content: document.querySelector(".js-input").value.trim(),
+            done: false,
+        });
+        render();
+    };
+
+    const onFormSubmit = (event) => {
+        event.preventDefault();
+
+        if (document.querySelector(".js-input").value.trim() === "") {
+            return;
+        }
+
+        addNewTask();
+
+    };
+
     const render = () => {
         let htmlString = "";
 
@@ -14,20 +33,7 @@
 
     const init = () => {
 
-        document.querySelector(".js-form").addEventListener("submit", (event) => {
-            event.preventDefault();
-
-            if (document.querySelector(".js-input").value === "") {
-                return;
-            }
-
-            tasks.push({
-                content: document.querySelector(".js-input").value.trim(),
-                done: false,
-            });
-            render();
-            
-        })
+        document.querySelector(".js-form").addEventListener("submit", onFormSubmit)
 
         render();
     };
