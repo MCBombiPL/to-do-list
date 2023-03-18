@@ -76,11 +76,17 @@ html {
 .newTasks__checkboxButton {
     background-color: green;
     border: none;
+    color: white;
+}
+
+.newTasks__checkboxButton--checked {
+    text-decoration: line-through;
 }
 
 .newTasks__removingButton {
     background-color: red;
     border: none;
+    color: white;
 }
 
 .newTasks__content {
