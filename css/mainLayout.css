@@ -1,4 +1,4 @@
-.taskList__container {
+.mainLayout__container {
     margin: 0 auto;
     font-family: Montserrat, sans-serif;
     padding: 3%;
@@ -6,18 +6,18 @@
 }
 
 @media (max-width: 767px) {
-    .taskList__container {
+    .mainLayout__container {
         width: 100%;
         margin: auto;
     }
 }
 
-.taskList__header {
+.mainLayout__header {
     font-weight: 700;
     margin-bottom: 20px;
 }
 
-.taskList__secondaryHeader--top {
+.mainLayout__secondaryHeader--top {
     font-weight: 700;
     margin: 0px;
     padding: 1%;
@@ -26,12 +26,12 @@
 }
 
 @media (max-width: 767px) {
-    .taskList__secondaryHeader--top {
+    .mainLayout__secondaryHeader--top {
         padding: 5%;
     }
 }
 
-.taskList__secondaryHeader--bottom {
+.mainLayout__secondaryHeader--bottom {
     font-weight: 700;
     margin: 10px 0px 0px;
     background-color: white;
@@ -40,7 +40,7 @@
 }
 
 @media (max-width: 767px) {
-    .taskList__secondaryHeader--bottom {
+    .mainLayout__secondaryHeader--bottom {
         padding: 5%;
     }
 }
