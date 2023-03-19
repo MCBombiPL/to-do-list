@@ -10,7 +10,7 @@ It's a simple task list creator. You can add new tasks by typing them in the inp
  ***
 Just have a quick look how simple it is!
 
-![DEMO gif]()
+![DEMO gif](pictures/demo%20gif.gif)
 
 ## Technologies
 
