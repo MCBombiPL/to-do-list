@@ -1,0 +1,64 @@
+.newTasks__container {
+    background-color: white;
+    padding: 1%;
+}
+
+.newTasks__listItem {
+    list-style-type: none;
+    border-bottom: 1px solid #ccc;
+    padding: 5% 2%;
+    min-height: 50px;
+    display: grid;
+    grid-template-columns: 30px 1fr 30px;
+    grid-gap: 10px;
+}
+
+.newTasks__checkboxButton {
+    background-color: rgb(4, 106, 4);
+    border: none;
+    color: white;
+    height: 30px;
+}
+
+.newTasks__checkboxButton:hover {
+    background-color: rgb(6, 138, 6);
+}
+
+.newTasks__checkboxButton:active {
+    background-color: rgb(7, 161, 7);
+}
+
+@media (max-width: 767px) {
+    .newTasks__checkboxButton {
+        align-self: center;
+    }
+}
+
+.newTasks__checkboxButton--checked {
+    text-decoration: line-through;
+}
+
+.newTasks__removingButton {
+    background-color: rgb(246, 15, 15);
+    border: none;
+    color: white;
+    height: 30px;
+}
+
+.newTasks__removingButton:hover {
+    background-color: rgb(250, 46, 46);
+}
+
+.newTasks__removingButton:active {
+    background-color: rgb(249, 69, 69);
+}
+
+@media (max-width: 767px) {
+    .newTasks__removingButton {
+        align-self: center;
+    }
+}
+
+.newTasks__content {
+    align-self: center;
+}

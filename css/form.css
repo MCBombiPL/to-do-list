@@ -1,0 +1,45 @@
+.form {
+    background-color: white;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    grid-gap: 10px;
+}
+
+@media (max-width: 767px) {
+    .form {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+    }
+}
+
+.form__input {
+    font-family: Montserrat, sans-serif;
+    align-self: stretch;
+    flex-basis: 30px;
+}
+
+.form__submitButton {
+    background-color: teal;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-family: Montserrat, sans-serif;
+}
+
+.form__submitButton:hover {
+    background-color: rgb(2, 153, 153);
+}
+
+.form__submitButton:active {
+    background-color: rgb(1, 164, 164);
+}
+
+
+@media (max-width: 767px) {
+    .form__submitButton {
+        align-self: stretch;
+    }
+}
