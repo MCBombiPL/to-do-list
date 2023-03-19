@@ -7,7 +7,8 @@ html {
 }
 
 .body {
-    background-color:#e7e6e6;
+    background-color: #e7e6e6;
+    word-break: break-word;
 }
 
 .taskList {
@@ -37,6 +38,15 @@ html {
     grid-gap: 10px;
 }
 
+@media (max-width: 767px) {
+    .taskList__form {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+    }
+}
+
+
 .taskList__input {
     font-family: Montserrat, sans-serif;
     align-self: stretch;
@@ -50,24 +60,30 @@ html {
     font-family: Montserrat, sans-serif;
 }
 
+@media (max-width: 767px) {
+    .taskList__button {
+        align-self: stretch;
+    }
+}
+
 .taskList__secondaryHeader--bottom {
     font-weight: 700;
     margin: 10px 0px 0px;
     background-color: white;
-    padding: 20px;
+    padding: 1%;
     border-bottom: 1px solid #e7e6e6;
 }
 
-.newTasks {
+.newTasks__container {
     background-color: white;
-    padding: 20px;
+    padding: 1%;
 }
 
 .newTasks__listItem {
     list-style-type: none;
     border-bottom: 1px solid #ccc;
-    padding: 10px;
-    height: 50px;
+    padding: 5% 2%;
+    min-height: 50px;
     display: grid;
     grid-template-columns: 30px 1fr 30px;
     grid-gap: 10px;
@@ -77,6 +93,13 @@ html {
     background-color: green;
     border: none;
     color: white;
+    height: 30px;
+}
+
+@media (max-width: 767px) {
+    .newTasks__checkboxButton {
+        align-self: center;
+    }
 }
 
 .newTasks__checkboxButton--checked {
@@ -87,7 +110,15 @@ html {
     background-color: red;
     border: none;
     color: white;
+    height: 30px;
 }
+
+@media (max-width: 767px) {
+    .newTasks__removingButton {
+        align-self: center;
+    }
+}
+
 
 .newTasks__content {
     align-self: center;
