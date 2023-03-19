@@ -46,7 +46,7 @@ html {
     background-color: white;
     padding: 20px;
     display: grid;
-    grid-template-columns: 1fr 120px;
+    grid-template-columns: 1fr auto;
     align-items: center;
     grid-gap: 10px;
 }
@@ -72,6 +72,15 @@ html {
     border: none;
     font-family: Montserrat, sans-serif;
 }
+
+.form__submitButton:hover {
+    background-color: rgb(2, 153, 153);
+}
+
+.form__submitButton:active {
+    background-color: rgb(1, 164, 164);
+}
+
 
 @media (max-width: 767px) {
     .form__submitButton {
@@ -109,10 +118,18 @@ html {
 }
 
 .newTasks__checkboxButton {
-    background-color: green;
+    background-color: rgb(4, 106, 4);
     border: none;
     color: white;
     height: 30px;
+}
+
+.newTasks__checkboxButton:hover {
+    background-color: rgb(6, 138, 6);
+}
+
+.newTasks__checkboxButton:active {
+    background-color: rgb(7, 161, 7);
 }
 
 @media (max-width: 767px) {
@@ -126,10 +143,18 @@ html {
 }
 
 .newTasks__removingButton {
-    background-color: red;
+    background-color: rgb(246, 15, 15);
     border: none;
     color: white;
     height: 30px;
+}
+
+.newTasks__removingButton:hover {
+    background-color: rgb(250, 46, 46);
+}
+
+.newTasks__removingButton:active {
+    background-color: rgb(249, 69, 69);
 }
 
 @media (max-width: 767px) {
