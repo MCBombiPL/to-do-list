@@ -6,11 +6,17 @@
 .newTasks__listItem {
     list-style-type: none;
     border-bottom: 1px solid #ccc;
-    padding: 5% 2%;
+    padding: 2% 2%;
     min-height: 50px;
     display: grid;
     grid-template-columns: 30px 1fr 30px;
     grid-gap: 10px;
+}
+
+@media (max-width: 767px) {
+    .newTasks__listItem {
+        padding: 5% 2%;
+    }
 }
 
 .newTasks__checkboxButton {
