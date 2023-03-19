@@ -11,14 +11,14 @@ html {
     word-break: break-word;
 }
 
-.taskList {
+.taskList__container {
     margin: 30px 60px;
     font-family: Montserrat, sans-serif;
     padding: 3%;
 }
 
 @media (max-width: 767px) {
-    .taskList {
+    .taskList__container {
         width: 100%;
         margin: auto;
     }
@@ -42,7 +42,7 @@ html {
         padding: 5%;
     }
 }
-.taskList__form {
+.form {
     background-color: white;
     padding: 20px;
     display: grid;
@@ -52,20 +52,20 @@ html {
 }
 
 @media (max-width: 767px) {
-    .taskList__form {
+    .form {
         display: flex;
         flex-direction: column;
         flex-basis: 100%;
     }
 }
 
-.taskList__input {
+.form__input {
     font-family: Montserrat, sans-serif;
     align-self: stretch;
     flex-basis: 30px;
 }
 
-.taskList__button {
+.form__submitButton {
     background-color: teal;
     color: white;
     padding: 10px;
@@ -74,7 +74,7 @@ html {
 }
 
 @media (max-width: 767px) {
-    .taskList__button {
+    .form__submitButton {
         align-self: stretch;
     }
 }
