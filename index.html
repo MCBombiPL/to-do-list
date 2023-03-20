@@ -9,7 +9,7 @@
     <script defer src="js/script.js"></script>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
-    <link href="css/mainLayout.css" rel="stylesheet">
+    <link href="css/section.css" rel="stylesheet">
     <link href="css/newTasks.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,22 +19,26 @@
 </head>
 
 <body class="body">
-    <div class="mainLayout__container">
-        <h1 class="mainLayout__header--top">Lista zadań</h1>
-        <h2 class="mainLayout__secondaryHeader--top">
-            <label for="input">Dodaj nowe zadanie</label>
-        </h2>
-        <form class="form js-form">
-            <input id="input" class="form__input js-input" placeholder="Co jest do zrobienia?" autofocus>
-            <button class="form__submitButton js-button">Dodaj zadanie</button>
-        </form>
-        <h2 class="mainLayout__secondaryHeader--bottom">Lista zadań</h2>
-        <div class="newTasks__container">
-            <ul class="js-newTasks newTasks">
+    <div class="container">
+        <h1 class="header">Lista zadań</h1>
+        <section>
+            <h2 class="section__header">
+                <label for="input">Dodaj nowe zadanie</label>
+            </h2>
+            <form class="form js-form">
+                <input id="input" class="form__input js-input" placeholder="Co jest do zrobienia?" autofocus>
+                <button class="form__submitButton js-button">Dodaj zadanie</button>
+            </form>
+        </section>
+        <section>
+            <h2 class="section__header">Lista zadań</h2>
+            <div class="section__container">
+                <ul class="js-newTasks newTasks">
 
-            </ul>
-            </ul>
-        </div>
+                </ul>
+                </ul>
+            </div>
+        </section>
     </div>
 </body>
 

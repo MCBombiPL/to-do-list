@@ -1,0 +1,23 @@
+.header {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.section__header {
+    font-weight: 700;
+    margin: 0px;
+    padding: 1%;
+    background-color: white;
+    border-bottom: 1px solid #e7e6e6;
+}
+
+@media (max-width: 767px) {
+    .section__header {
+        padding: 5%;
+    }
+}
+
+.section__container {
+    background-color: white;
+    padding: 1%;
+}

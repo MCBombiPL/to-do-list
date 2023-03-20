@@ -9,9 +9,8 @@
 
 @media (max-width: 767px) {
     .form {
-        display: flex;
-        flex-direction: column;
-        flex-basis: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 100%);
     }
 }
 

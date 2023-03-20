@@ -6,11 +6,6 @@
             content: inputContent,
             done: false,
         });
-
-        document.querySelector(".js-input").value = "";
-        document.querySelector(".js-input").focus();
-
-        render();
     };
 
     const onFormSubmit = (event) => {
@@ -24,32 +19,36 @@
 
         addNewTask(inputContent);
 
-    };
+        document.querySelector(".js-input").value = "";
+        document.querySelector(".js-input").focus();
 
-    const removeTask = (removingButtonIndex) => {
-        tasks.splice(removingButtonIndex, 1);
         render();
     };
 
-    const toggleDoneTask = (checkboxButtonIndex) => {
-        tasks[checkboxButtonIndex].done = !tasks[checkboxButtonIndex].done;
+    const removeTask = (removeTaskButtonIndex) => {
+        tasks.splice(removeTaskButtonIndex, 1);
         render();
     };
 
-    const buttonEvents = () => {
-        const removingButtons = document.querySelectorAll(".newTasks__removingButton");
+    const toggleTaskDone = (toggleTaskDoneButtonIndex) => {
+        tasks[toggleTaskDoneButtonIndex].done = !tasks[toggleTaskDoneButtonIndex].done;
+        render();
+    };
 
-        removingButtons.forEach((removingButton, removingButtonIndex) => {
-            removingButton.addEventListener("click", () => {
-                removeTask(removingButtonIndex);
+    const bindButtonEvents = () => {
+        const removeTaskButtons = document.querySelectorAll(".newTasks__removeTaskButton");
+
+        removeTaskButtons.forEach((removeTaskButton, removeTaskButtonIndex) => {
+            removeTaskButton.addEventListener("click", () => {
+                removeTask(removeTaskButtonIndex);
             });
         });
 
-        const checkboxButtons = document.querySelectorAll(".newTasks__checkboxButton");
+        const toggleTaskDoneButtons = document.querySelectorAll(".newTasks__toggleTaskDoneButton");
 
-        checkboxButtons.forEach((checkboxButton, checkboxButtonIndex) => {
-            checkboxButton.addEventListener("click", () => {
-                toggleDoneTask(checkboxButtonIndex);
+        toggleTaskDoneButtons.forEach((toggleTaskDoneButton, toggleTaskDoneButtonIndex) => {
+            toggleTaskDoneButton.addEventListener("click", () => {
+                toggleTaskDone(toggleTaskDoneButtonIndex);
             });
         });
     };
@@ -58,18 +57,23 @@
         let htmlString = "";
 
         for (const task of tasks) {
-            htmlString += `<li class="newTasks__listItem"><button class="newTasks__checkboxButton">${task.done ? "✔" : ""}</button>
-    <span class="newTasks__content  ${task.done ? "newTasks__checkboxButton--checked" : ""}">${task.content}</span><button class="newTasks__removingButton">🗑</button>
-    </li>`
+            htmlString += `
+            <li class="newTasks__listItem">
+            <button class="newTasks__toggleTaskDoneButton">${task.done ? "✔" : ""}</button>
+            <span class="newTasks__content  ${task.done ? "newTasks__toggleTaskDoneButton--checked" : ""}">${task.content}</span>
+            <button class="newTasks__removeTaskButton">🗑</button>
+            </li>
+            `
         }
         document.querySelector(".js-newTasks").innerHTML = htmlString;
 
-        buttonEvents();
+        bindButtonEvents();
     };
 
     const init = () => {
 
-        document.querySelector(".js-form").addEventListener("submit", onFormSubmit)
+        const form = document.querySelector(".js-form");
+        form.addEventListener("submit", onFormSubmit)
 
         render();
     };

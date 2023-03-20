@@ -10,3 +10,17 @@ html {
     background-color: #e7e6e6;
     word-break: break-word;
 }
+
+.container {
+    margin: 0 auto;
+    font-family: Montserrat, sans-serif;
+    padding: 3%;
+    max-width: 1200px;
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 100%;
+        margin: auto;
+    }
+}
