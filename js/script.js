@@ -1,11 +1,12 @@
 {
-    const tasks = [];
+    let tasks = [];
 
     const addNewTask = (inputContent) => {
-        tasks.push({
+        const newTask = {
             content: inputContent,
             done: false,
-        });
+        };
+        tasks = [...tasks, newTask];
     };
 
     const onFormSubmit = (event) => {
@@ -26,12 +27,22 @@
     };
 
     const removeTask = (removeTaskButtonIndex) => {
-        tasks.splice(removeTaskButtonIndex, 1);
+        const newTasks = tasks.filter((task, index) => index !== removeTaskButtonIndex);
+        tasks = newTasks;
         render();
     };
 
     const toggleTaskDone = (toggleTaskDoneButtonIndex) => {
-        tasks[toggleTaskDoneButtonIndex].done = !tasks[toggleTaskDoneButtonIndex].done;
+        const newTasks = tasks.map((task, index) => {
+            if (index === toggleTaskDoneButtonIndex) {
+                return {
+                    ...task,
+                    done: !task.done,
+                };
+            }
+            return task;
+        });
+        tasks = newTasks;
         render();
     };
 
