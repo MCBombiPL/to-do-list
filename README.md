@@ -19,5 +19,6 @@ I used technologies mentioned below to create this app:
 - CSS,
 - JS,
 - BEM convention,
+- Immutability convention,
 - ES6+ features,
 - MD
