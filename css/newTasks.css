@@ -1,3 +1,7 @@
+.newTasks {
+    padding: none;
+}
+
 .newTasks__listItem {
     list-style-type: none;
     border-bottom: 1px solid #ccc;
