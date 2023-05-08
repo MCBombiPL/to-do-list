@@ -6,14 +6,14 @@
 .section__header {
     font-weight: 700;
     margin: 0px;
-    padding: 1%;
+    padding: 20px;
     background-color: white;
     border-bottom: 1px solid #e7e6e6;
 }
 
 @media (max-width: 767px) {
     .section__header {
-        padding: 5%;
+        padding: 20px;
     }
 }
 
