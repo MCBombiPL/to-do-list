@@ -18,6 +18,8 @@
     font-family: Montserrat, sans-serif;
     align-self: stretch;
     flex-basis: 30px;
+    padding: 10px;
+    border: 1px solid #ddd;
 }
 
 .form__button {
@@ -26,10 +28,12 @@
     padding: 10px;
     border: none;
     font-family: Montserrat, sans-serif;
+    transition: 0.3s;
 }
 
 .form__button:hover {
     background-color: rgb(2, 153, 153);
+    transform: scale(1.1);
 }
 
 .form__button:active {
