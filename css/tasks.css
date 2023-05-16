@@ -37,6 +37,7 @@
     border: none;
     color: white;
     height: 30px;
+    width: 30px;
 }
 
 .tasks__button--toggleDone:hover {
@@ -51,10 +52,6 @@
     .tasks__button--toggleDone {
         align-self: center;
     }
-}
-
-.tasks__button--toggleDone--checked {
-    text-decoration: line-through;
 }
 
 .tasks__button--remove {
@@ -86,7 +83,7 @@
     text-decoration: line-through;
 }
 
-.newTasks__toggleTaskDoneButton {
+.tasks__button--toggleDone {
     border: none;
     color: white;
     width: 30px;
@@ -94,10 +91,10 @@
     background-color: rgb(4, 106, 4);
 }
 
-.newTasks__toggleTaskDoneButton:hover {
+.tasks__button--toggleDone:hover {
     background-color: rgb(6, 138, 6);
 }
 
-.newTasks__toggleTaskDoneButton:active {
+.tasks__button--toggleDone:active {
     background-color: rgb(7, 161, 7);
 }
