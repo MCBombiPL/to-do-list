@@ -20,7 +20,7 @@
     flex-basis: 30px;
 }
 
-.form__submitButton {
+.form__button {
     background-color: teal;
     color: white;
     padding: 10px;
@@ -28,17 +28,17 @@
     font-family: Montserrat, sans-serif;
 }
 
-.form__submitButton:hover {
+.form__button:hover {
     background-color: rgb(2, 153, 153);
 }
 
-.form__submitButton:active {
+.form__button:active {
     background-color: rgb(1, 164, 164);
 }
 
 
 @media (max-width: 767px) {
-    .form__submitButton {
+    .form__button {
         align-self: stretch;
     }
 }

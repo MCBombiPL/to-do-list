@@ -8,9 +8,10 @@
     <title>To-do list</title>
     <script defer src="js/script.js"></script>
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/container.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
     <link href="css/section.css" rel="stylesheet">
-    <link href="css/newTasks.css" rel="stylesheet">
+    <link href="css/tasks.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -19,27 +20,32 @@
 </head>
 
 <body class="body">
-    <div class="container">
-        <h1 class="header">Lista zadań</h1>
-        <section>
-            <h2 class="section__header">
-                <label for="input">Dodaj nowe zadanie</label>
-            </h2>
-            <form class="form js-form">
-                <input id="input" class="form__input js-input" placeholder="Co jest do zrobienia?" autofocus>
-                <button class="form__submitButton js-button">Dodaj zadanie</button>
-            </form>
-        </section>
-        <section>
-            <h2 class="section__header">Lista zadań</h2>
-            <div class="section__container">
-                <ul class="js-newTasks newTasks">
+    <main class="container">
+        <header>
+            <h1>Lista zadań</h1>
+        </header>
 
-                </ul>
-                </ul>
+        <section class="section">
+            <header class="section__header">
+                <h2 class="section__title">Dodaj nowe zadanie</h2>
+            </header>
+            <div class="section__container">
+                <form class="form js-form">
+                    <input class="form__input js-newTask" placeholder="Co jest do zrobienia?" autofocus>
+                    <button class="form__button">Dodaj zadanie</button>
+                </form>
             </div>
         </section>
-    </div>
+        <section class="section">
+            <header class="section__header">
+                <h2 class="section__title">Lista zadań</h2>
+                <div class="buttons js-buttons"></div>
+            </header>
+            <div class="section__container">
+                <ul class="tasks js-tasks"></ul>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>
