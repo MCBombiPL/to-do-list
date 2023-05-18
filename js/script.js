@@ -95,7 +95,7 @@
           return;
         }
       
-        const anyTaskUndone = tasks.some(({ done }) => !done);
+        const everyTaskDone = tasks.every(({ done }) => done);
         const anyTaskHidden = tasks.some(({ done }) => done && hideDoneTasks);
       
         buttonsElement.innerHTML = `
@@ -103,7 +103,7 @@
             ${anyTaskHidden ? "Pokaż" : "Ukryj"} ukończone
           </button>
           <button class="buttons__button js-markAllDone"
-            ${tasks.every(({ done }) => done) ? "disabled" : ""}
+            ${everyTaskDone ? "disabled" : ""}
           >
             Ukończ wszystkie
           </button>
